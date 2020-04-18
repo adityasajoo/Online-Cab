@@ -1,0 +1,72 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.card{
+    padding: 5px;
+    margin-right: 0px;
+    background-color: #ececec;
+
+}
+
+.card .register{
+    background-color: #FF7463;
+    border: none;
+
+}
+
+
+
+.form-group{
+    padding-top: 0%;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.form-control{
+    padding-top: 0%;
+    margin-top: 0em;
+    color: #FF7463;
+}
+
+.form-group > input {
+    padding-bottom: 0%;
+}
+
+.ride{
+    margin-left: 0em;
+    width: auto;
+    margin-top: 85px;
+    height: 400px;
+}
+
+.avatar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 8rem;
+    width: 0;
+}
+
+.register{
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #FF7463;
+}
+
+.button{
+    margin : 30px;
+    background-color: #FF7463;
+     float: right;
+     margin-bottom: 0px;
+}
+
+.card .register:hover{
+    background-color: black;
+    margin: 0;
+}
+

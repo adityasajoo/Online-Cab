@@ -1,0 +1,53 @@
+*{
+    padding: 0%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container{
+    border: 3in black;
+}
+
+.card{
+    padding: 0px;
+    margin: auto;
+    float: left; 
+
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.card .login{
+    box-sizing: inherit;
+    padding: 2%;
+    padding-left:  30px;
+    padding-right:  30px;
+    margin-top: 12px;
+    background-color: #FF7463;
+}
+
+
+.forgot{
+    float: right;
+    color: #0f0f2f;
+    text-decoration: none;
+    padding: 0%;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0em;
+
+}
+
+.travel{
+    float: left;
+    width: auto;
+    height: 500px;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.avatar{
+    height: 8rem;
+    width: auto;
+}

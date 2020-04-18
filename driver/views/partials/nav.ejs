@@ -1,0 +1,40 @@
+<style>
+   a:link{
+      text-decoration: none;
+   }
+   a{
+      text-decoration: none;
+       color: #FF7463;
+       font-size: 32px;
+   }
+   a:hover{
+      color: black;
+   }
+
+</style>
+<div class=navbar>
+    <header>
+       <nav>
+          
+          <div class="logo">
+             <a href="/">
+               TAXIFY
+            </a>
+          </div>
+          <div class="menu">
+             <ul>
+                <li class="nav-item"><a href="#">About Us</a></li>
+                <% if(!currentUser){ %>
+                <li class="nav-item"><a href="/driver/login">Rides</a></li>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Signup</a></li>
+                <% }else{ %>
+                <li class="nav-item"><a href="/driver/dashboard/<%= currentUser.id%>">Rides</a></li>
+                <li class="nav-item"><a href="/driver/dashboard/<%= currentUser.id%>"><%= currentUser.name %></a></li>
+                <li class="nav-item"><a href="/driver/logout">Logout</a></li>   
+                <% } %>
+             </ul>
+          </div>
+       </nav>
+    </header>
+ </div>

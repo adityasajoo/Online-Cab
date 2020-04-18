@@ -1,0 +1,45 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <a href="/driver/dashboard/<%= currentUser._id %>" class="card-link">< Back to dashboard</a>
+                    <% let date = cab.date.split("-") %>
+                  <h5 class="card-title"><%= date[2] %> <%= findMonth(date[1]) %> <%= date[0]%>;  <%= cab.time%></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">&#x20B9 <%= cab.fare%></h6>
+                  <p class="card-text"><b>Pickup :</b> <%= cab.pickup %></p>
+                  <p class="card-text"><b>Drop :</b> <%= cab.drop %></p>
+                  <p class="card-text"><b>Customer :</b> <%= cab.customerName %></p>
+                  <p class="card-text"><b>Cab :</b> <%= cab.carName %></p>
+                  <p class="card-text"><b>Car Registration number :</b> <%= cab.regNo %></p>
+                </div>
+              </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+
+
+<% function findMonth(month){
+    if(month==1) return "January";
+    if(month==2) return "February";
+    if(month==3) return "March";
+    if(month==4) return "April";
+    if(month==5) return "May";
+    if(month==6) return "Jun";
+    if(month==7) return "July";
+    if(month==8) return "August";
+    if(month==9) return "September";
+    if(month==10) return "October";
+    if(month==11) return "November";
+    if(month==12) return "December";
+} %>
+
+
+<%- include("../partials/footer") %>

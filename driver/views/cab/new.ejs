@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <link rel="stylesheet" href="/css/nav.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+        
+        
+    </head>
+
+    <%- include ("../partials/nav") %>
+
+    <style>
+        .book {
+            color: #FF7463;
+            margin-top: 20px;
+        }
+    
+        .book-btn{
+            color: azure;
+            background-color: #FF7463;
+            border: none;
+        }
+
+        
+    
+        .book-btn:hover{
+            background-color: black;
+        }
+
+      #mapid{
+        width: 100%;
+        height: 350px;
+      }
+
+    </style>
+
+    <body style='border:0; margin: 0'>
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div id="mapid"></div>
+                </div>
+                <div class="col">
+                    <div style="width:80%; margin:35px auto;">
+                        <%- include ("../partials/messages") %>
+            
+                        <form action="/cab/new" method="post">
+                            <div class="form-group">
+                                <input class="form-control" id="pickup" type="text" name="pickup" placeholder="PickUp Location" value="<%= typeof pickup!='undefined' ? pickup: '' %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="drop" type="text" name="drop" placeholder="Drop Location" value="<%= typeof drop!='undefined' ? drop: ''%>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="mydate" type="date" name="date" value="<%= nowDate %>" min="<%= nowDate %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="time" name="time" pattern="^[0-2][1-12]:[0-9][0-9]$" placeholder="time" value="<%= typeof time!='undefined' ? time: ''%>">
+                            </div>
+                             <div class="form-group">
+                            <button class="btn btn-lg  btn-block book-btn">Book Now!</button>
+                           </div>
+                    
+                        </form>
+                        <a href="/" >Back to Home</a>
+            
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        <script type="text/javascript" src="/js/newCab.js"></script>
+    </body>
+</html>
