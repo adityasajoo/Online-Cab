@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="container">
+    <div class="row ">
+        <div class="col-7 d-none d-lg-block ">
+            <img class="travel" src="/images/travel.svg" alt="Error">
+        </div>
+        <div class="col-5">
+            <div class="card" style="width: 20rem; height: 30rem;" >
+
+                <img class="avatar" src="/images/avatar_login.svg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <%- include ("../partials/messages") %>
+
+                <p class="card-text">
+                    <form action="/cust/login" method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                             <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                          </div>
+                          
+                        <button type="submit" class="btn btn-primary login">Login</button>
+
+                    </form>
+                </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+</div>
+
+<%- include("../partials/footer") %>

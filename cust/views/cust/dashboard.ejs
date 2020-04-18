@@ -1,0 +1,66 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<style>
+    .my-card{
+        margin-top: 20px;
+    }
+
+    h4{
+        font-weight: bold;
+        font-size: larger;
+    }
+
+</style>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+        </div>
+        <div class="col-10">
+            <h4>All Rides </h4>
+            <%- include ("../partials/messages") %>
+
+            <% cust.cabs.forEach(cab=>{ %>
+                <% let date = cab.date.split("-") %>
+                <div class="card my-card" style="width: 100%">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= date[2] %> <%= findMonth(date[1]) %> <%= date[0]%>;  <%= cab.time%></h5>
+                      <h6 class="card-subtitle mb-2 text-muted">&#x20B9 <%= cab.fare %></h6>
+                      <p class="card-text"><%= cab.drop %></p>
+                      <a href="/cab/show/<%=cab._id%>" class="card-link">More Info</a>
+                    </div>
+                  </div>
+    
+            <%})%>
+
+        </div>
+
+            
+        <div class="col">
+
+        </div>
+
+    </div>
+</div>
+
+<% function findMonth(month){
+    if(month==1) return "January";
+    if(month==2) return "February";
+    if(month==3) return "March";
+    if(month==4) return "April";
+    if(month==5) return "May";
+    if(month==6) return "Jun";
+    if(month==7) return "July";
+    if(month==8) return "August";
+    if(month==9) return "September";
+    if(month==10) return "October";
+    if(month==11) return "November";
+    if(month==12) return "December";
+} %>
+
+
+<%- include("../partials/footer") %>
