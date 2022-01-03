@@ -44,7 +44,7 @@ passportConfig(passport);
 
 
 //Connect to mongo
-const url = "mongodb+srv://cabonline:cab123@cluster0-9apnr.mongodb.net/test?retryWrites=true&w=majority" 
+const url = "Your Mongo URL" 
 mongoose.connect(url,{
     useNewUrlParser: true,
     useCreateIndex: true,
